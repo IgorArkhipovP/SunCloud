@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41655A20277A541E0028B733 /* WeatherReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41655A1F277A541E0028B733 /* WeatherReport.swift */; };
 		417D1C242779B66800514EBA /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D1C232779B66800514EBA /* MainVC.swift */; };
 		417D1C262779B69600514EBA /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D1C252779B69600514EBA /* WeatherVC.swift */; };
 		418FB6882779B2C4009C01EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418FB6872779B2C4009C01EA /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41655A1F277A541E0028B733 /* WeatherReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherReport.swift; sourceTree = "<group>"; };
 		417D1C232779B66800514EBA /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		417D1C252779B69600514EBA /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		418FB6842779B2C4009C01EA /* SunCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +63,7 @@
 				418FB6872779B2C4009C01EA /* AppDelegate.swift */,
 				418FB6892779B2C4009C01EA /* SceneDelegate.swift */,
 				417D1C232779B66800514EBA /* MainVC.swift */,
+				41655A1F277A541E0028B733 /* WeatherReport.swift */,
 				417D1C252779B69600514EBA /* WeatherVC.swift */,
 				418FB68D2779B2C4009C01EA /* Main.storyboard */,
 				418FB6902779B2C8009C01EA /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				418FB6882779B2C4009C01EA /* AppDelegate.swift in Sources */,
 				417D1C242779B66800514EBA /* MainVC.swift in Sources */,
+				41655A20277A541E0028B733 /* WeatherReport.swift in Sources */,
 				418FB68A2779B2C4009C01EA /* SceneDelegate.swift in Sources */,
 				417D1C262779B69600514EBA /* WeatherVC.swift in Sources */,
 			);
