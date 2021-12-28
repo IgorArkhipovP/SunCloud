@@ -24,8 +24,6 @@ class MainVC: UIViewController {
     }
     
     @IBAction func buttonGoTapped(_ sender: Any) {
-        performSegue(withIdentifier: segueToWeatherVC, sender: nil)
-        
         guard citySelectTextField.text?.isEmpty == false else {return}
         
         var components = URLComponents(string: "http://api.openweathermap.org/data/2.5/weather")
@@ -38,8 +36,7 @@ class MainVC: UIViewController {
         guard let url = components?.url else {return}
         
         let session = URLSession.shared
-        let dataTask = session.dataTask(with: url) {[weak self] (data, _, error) in
-            guard let self = self else {return}
+        let dataTask = session.dataTask(with: url) {(data, _, error) in
             if let error = error {
                 print(error)
             } else if let data = data {
@@ -47,7 +44,10 @@ class MainVC: UIViewController {
                     //                let json = try JSONSerialization.jsonObject(with: data, options: [])
                     //                    print(json)
                     let weatherReport = try JSONDecoder().decode(WeatherReport.self, from: data)
-                    print(weatherReport)
+//                    print(weatherReport)
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: self.segueToWeatherVC, sender: weatherReport)
+                    }
                 } catch {
                     print(error)
                 }
@@ -58,5 +58,13 @@ class MainVC: UIViewController {
     
     @IBAction func returnToMainVC(_ sender: UIStoryboardSegue) {}
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let weatherVC = segue.destination as? WeatherVC,
+           let weatherReport = sender as? WeatherReport{
+            weatherVC.weatherReport = weatherReport
+        }
+    }
     
 }
