@@ -41,10 +41,10 @@ class MainVC: UIViewController {
                 print(error)
             } else if let data = data {
                 do {
-                    //                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    //                    print(json)
+                                  let json = try JSONSerialization.jsonObject(with: data, options: [])
+                                      print(json)
                     let weatherReport = try JSONDecoder().decode(WeatherReport.self, from: data)
-//                    print(weatherReport)
+                    print(weatherReport)
                     DispatchQueue.main.async {
                         self.performSegue(withIdentifier: self.segueToWeatherVC, sender: weatherReport)
                     }
